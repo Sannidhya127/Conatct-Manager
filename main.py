@@ -3,6 +3,20 @@
 import keyword
 
 
+def addContact():
+    pass
+
+def deleteContact():
+    pass
+
+def listAllContact():
+    pass
+
+def SourceCode():
+    pass
+
+def GithubRedirection():
+    pass
 
 
 
