@@ -1,10 +1,15 @@
 # This programs belongs to Mr. Stupidity x 100
 
 import keyword
-
+from typing_extensions import ParamSpecKwargs
+from datetime import date
 
 def addContact():
-    pass
+    contact = input("Enter the mobile number: ")
+    ContactName = input("Enter the contact name: ")
+    ContactsFileCreationOrWriting = open("contacts.txt", "a")
+    FileContent = ContactsFileCreationOrWriting.write(f"\n{date.today()} | {contact} | {ContactName}\n")
+
 
 def deleteContact():
     pass
@@ -28,3 +33,20 @@ if __name__ == '__main__':
     print(Instructions)
 
     UserInput = input("Enter here: ")
+    MainInput = UserInput.lower()
+
+
+    if MainInput == "a":
+        listAllContact()
+
+    elif MainInput == "t":
+        addContact()
+
+    elif MainInput == "d":
+        deleteContact()
+
+    elif MainInput == "src":
+        SourceCode()
+
+    elif MainInput == "gh redir":
+        GithubRedirection()
